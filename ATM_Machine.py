@@ -10,14 +10,12 @@ try:
 except:
     windows = False
 
-# 🔊 Cursed sound effect
 def cursed_sound():
     if windows:
         for _ in range(5):
             winsound.Beep(random.randint(300, 800), 200)
             time.sleep(0.1)
 
-# 👻 Cursed popup with keyboard lock
 def cursed_popup():
     def glitch_text():
         while True:
@@ -44,11 +42,9 @@ def cursed_popup():
     root.attributes("-topmost", True)
     root.focus_force()
 
-    # ❌ Disable closing
     root.protocol("WM_DELETE_WINDOW", lambda: None)
     root.bind("<Escape>", lambda e: None)
 
-    # 🚫 Trap all key presses
     def block_keys(event):
         return "break"
     
@@ -69,7 +65,6 @@ def cursed_popup():
     threading.Thread(target=glitch_text, daemon=True).start()
     root.mainloop()
 
-# 🏦 ATM Guardian Code
 reversed_money = []
 money = []
 odd_count = 0
@@ -93,7 +88,6 @@ while True:
     except:
         print("Invalid input. Try again.")
 
-# 🧠 Digital root
 original_amount = amount
 while original_amount >= 10:
     sum_of_digits = 0
@@ -103,7 +97,6 @@ while original_amount >= 10:
     original_amount = sum_of_digits
 digital_root = original_amount
 
-# 🔁 Palindrome curse check
 def is_palindrome(n):
     return str(n) == str(n)[::-1]
 
@@ -117,7 +110,6 @@ for i in range(10):
         break
     ritual_amount = new_sum
 
-# 🧾 Final Output
 print("\n🧾 TRANSACTION LOG 🧾")
 print("Total withdrawals:", count)
 print("Total amount withdrawn:", amount)
@@ -131,6 +123,5 @@ else:
 print("Reversed withdrawals:", reversed_money)
 print("Digital root of total amount:", digital_root)
 
-# 💀 Trigger the curse
 if cursed:
     cursed_popup()
